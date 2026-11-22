@@ -1,5 +1,6 @@
 (()=>{"use strict";
 const translations={
+"Fortniteギフト企画":"Fortnite Gift Events","Fortniteに関するギフト企画も実施しています。企画の内容や参加条件は、実施ごとの案内をご確認ください。":"We also host Fortnite gift events. Please check each event announcement for details and eligibility.","Web制作・ツール開発・ゲーム制作に加え、Fortniteのギフト企画など、さまざまな活動に取り組んでいます。":"Alongside web, tool, and game development, we also run activities such as Fortnite gift events.","Fortniteのギフト企画も行っていますか？":"Do you also host Fortnite gift events?","はい。Fortniteに関するギフト企画も実施しています。募集の有無や参加条件は、企画ごとの案内をご確認ください。":"Yes. We host Fortnite gift events. Please check each event announcement for availability and eligibility.",
 "ホーム":"Home","Aev0rnJPについて":"About Aev0rnJP","活動・制作分野":"Fields of Activity & Creation","プロジェクト一覧":"Projects","キャラクター紹介":"Character","制作過程":"Making Process","使用技術":"Technology Stack","よくある質問":"FAQ",
 "CREATIVE PROJECTS / DIGITAL WORKS":"CREATIVE PROJECTS / DIGITAL WORKS",
 "デジタル制作の企画・設計・開発を行っています。":"We plan, design, and build digital projects.",

@@ -122,8 +122,6 @@ function render(){
 function toggle(){lang=lang==="ja"?"en":"ja";saveLang(lang);render();}
 document.addEventListener("click",function(event){const target=event.target.closest("#lang");if(target){event.preventDefault();event.stopPropagation();toggle();}},true);
 render();
-const menuButton=document.getElementById("menu-toggle"),siteNav=document.getElementById("site-nav");
-if(menuButton&&siteNav){menuButton.addEventListener("click",()=>{const opened=siteNav.classList.toggle("open");menuButton.setAttribute("aria-expanded",String(opened));menuButton.setAttribute("aria-label",opened?"メニューを閉じる":"メニューを開く");});siteNav.addEventListener("click",e=>{if(e.target.closest("a")){siteNav.classList.remove("open");menuButton.setAttribute("aria-expanded","false");}});}
 window.addEventListener("pageshow",()=>{lang=readLang();render();});
 window.addEventListener("storage",e=>{if(e.key==="aev0rn_language"){lang=readLang();render();}});
 

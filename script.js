@@ -34,9 +34,44 @@ const translations={
 "立体表現によるキャラクターデザイン資料。":"3D character design reference.",
 "Aev0rnJPの公式チャンネル・制作物はこちらからご覧いただけます。":"Visit Aev0rnJP's official channel and projects.",
 "公式チャンネル @Aev0rnJP":"Official channel @Aev0rnJP","YouTubeを開く ↗":"Visit YouTube ↗","GitHubプロフィール ↗":"GitHub Profile ↗",
-"Website Repository ↗":"Website Repository ↗","色鉛筆イラスト":"Colored-pencil Illustration","3Dキャラクター":"3D Character"
+"Website Repository ↗":"Website Repository ↗","色鉛筆イラスト":"Colored-pencil Illustration","3Dキャラクター":"3D Character",
+"制作過程":"Making Process",
+"キャラクター制作過程":"Character Making Process",
+"2種類のキャラクターデザインについて、それぞれ独立した工程として紹介します。ラフスケッチから形を整え、仕上げに至るまでの流れを段階ごとにまとめています。":"This page presents the making process for two character designs, from initial sketches through refinement and final presentation.",
+"色鉛筆イラストの制作工程":"Colored-Pencil Illustration Process",
+"手描きの線と色鉛筆らしい柔らかな質感を活かすイラスト制作の工程です。":"This process uses hand-drawn lines and the soft texture of colored pencils.",
+"完成イメージ":"Final Artwork",
+"線の表情や色の重なりを残し、手描きならではの温かみを持つ三面図としてまとめます。":"The final turnaround preserves expressive lines, layered colors, and the warmth of a hand-drawn illustration.",
+"01. ラフスケッチ":"01. Rough Sketch",
+"頭身や全体のシルエット、ポーズを大まかに描き、キャラクターの方向性を決めます。":"Sketch the proportions, overall silhouette, and pose to establish the character's direction.",
+"02. 形と比率の整理":"02. Shape and Proportion",
+"顔、髪、衣装、手足の位置やバランスを調整します。":"Refine the placement and balance of the face, hair, outfit, and limbs.",
+"03. 線画の描き込み":"03. Line Art",
+"輪郭や髪の束、衣装の境界、小物などの形を明確にします。":"Define the outlines, hair strands, clothing edges, and accessories.",
+"04. 色鉛筆で着色":"04. Coloring",
+"ベースカラーを重ね、色の濃淡や陰影を少しずつ加えます。":"Layer base colors and gradually add tonal variation and shading.",
+"05. 質感と細部の仕上げ":"05. Texture and Details",
+"色の重なり、影、ハイライトを整え、手描きの風合いを残します。":"Refine color layers, shadows, and highlights while preserving the hand-drawn feel.",
+"06. 完成":"06. Final",
+"正面・側面・背面の配置と余白を整え、完成資料にまとめます。":"Arrange the front, side, and back views with balanced spacing for the final reference sheet.",
+"3Dキャラクターの制作工程":"3D Character Process",
+"立体の形状を組み立て、マテリアルやライティングによって完成イメージを整える工程です。":"Build the three-dimensional form, then refine its appearance with materials and lighting.",
+"立体感、表面の質感、青と紫を中心とした光の表現をまとめ、複数方向から確認できるデザイン資料にします。":"Present the character's form, surface materials, and blue-purple lighting in a reference sheet showing multiple views.",
+"01. ラフ・形状設計":"01. Concept and Shape Design",
+"シルエットと各パーツの大きさを決め、デザイン要素を整理します。":"Establish the silhouette, part proportions, and key design elements.",
+"02. ベースモデル作成":"02. Base Modeling",
+"頭部、胴体、手足、髪、衣装などの基本形状を作ります。":"Create the basic forms for the head, body, limbs, hair, and clothing.",
+"03. ディテール調整":"03. Detail Refinement",
+"髪の流れ、顔まわり、衣装や装飾などの細部を整えます。":"Refine the hair flow, facial features, clothing, and accessories.",
+"04. マテリアル設定":"04. Material Setup",
+"パーツごとに色や表面の反射を設定し、素材感を調整します。":"Set colors and surface reflections for each part to establish its material appearance.",
+"05. ライティングとレンダリング":"05. Lighting and Rendering",
+"光源や背景、陰影を調整して立体感を引き出します。":"Adjust lights, background, and shading to bring out the three-dimensional form.",
+"三方向の形状や配色を確認し、完成資料にまとめます。":"Check the shape and colors from all three views and assemble the final reference.",
+"※このページは、掲載されている完成画像をもとに整理した制作工程の紹介です。実際に記録された作業ログや未公開の途中段階画像を示すものではありません。":"Note: This is an overview of the process reconstructed from the published final images. It is not an actual work log or a set of recorded intermediate-stage images.",
+"← キャラクター紹介へ戻る":"← Back to Character"
 };
-const titleMap={"Aev0rnJPについて | Aev0rnJP":"About Aev0rnJP | Aev0rnJP","活動分野 | Aev0rnJP":"Fields | Aev0rnJP","制作プロジェクト | Aev0rnJP":"Projects | Aev0rnJP","オリジナルキャラクター | Aev0rnJP":"Original Character | Aev0rnJP","公式リンク | Aev0rnJP":"Official Links | Aev0rnJP"};
+const titleMap={"キャラクター制作過程 | Aev0rnJP":"Character Making Process | Aev0rnJP","Aev0rnJPについて | Aev0rnJP":"About Aev0rnJP | Aev0rnJP","活動分野 | Aev0rnJP":"Fields | Aev0rnJP","制作プロジェクト | Aev0rnJP":"Projects | Aev0rnJP","オリジナルキャラクター | Aev0rnJP":"Original Character | Aev0rnJP","公式リンク | Aev0rnJP":"Official Links | Aev0rnJP"};
 function readLang(){try{return localStorage.getItem("aev0rn_language")==="en"?"en":"ja"}catch(e){return "ja"}}
 function saveLang(v){try{localStorage.setItem("aev0rn_language",v)}catch(e){}}
 let lang=readLang();

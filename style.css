@@ -120,3 +120,20 @@ button:focus-visible,.links a:focus-visible,#site-nav a:focus-visible{
 @media(prefers-reduced-motion:reduce){
  *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* Lock page scrolling while the mobile menu is open; scroll only the menu panel. */
+@media(max-width:760px){
+ body.menu-open{overflow:hidden;overscroll-behavior:none;touch-action:none}
+ body.menu-open .top{z-index:1100}
+ body.menu-open #site-nav.open{
+  max-height:calc(100dvh - 82px);
+  overflow-y:auto;
+  overflow-x:hidden;
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+  touch-action:pan-y;
+  scrollbar-width:thin;
+  scrollbar-color:#8274bb #17142f;
+ }
+ body.menu-open #site-nav.open a{flex:0 0 auto}
+}

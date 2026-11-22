@@ -12,7 +12,9 @@
 .process-section{margin:28px 0 64px}
 .process-section h2{font-size:clamp(24px,4vw,34px);margin:0 0 8px}
 .process-final{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,.8fr);gap:20px;align-items:center;margin:20px 0 26px}
-.process-final .visual{padding:8px}
+.process-final .visual{padding:12px;display:flex;align-items:center;justify-content:center;min-height:260px;background:linear-gradient(145deg,#17142e,#0d0c1b)}
+.process-final .visual img{display:block;width:100%;height:auto;max-height:620px;object-fit:contain;object-position:center;margin:auto;border-radius:10px}
+.process-section{scroll-margin-top:90px}
 .steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;counter-reset:step}
 .step{position:relative;background:linear-gradient(145deg,#19172f,#100f21);border:1px solid var(--line);border-radius:14px;padding:20px 20px 20px 62px;min-height:132px}
 .step:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:18px;top:18px;color:var(--blue);font-weight:800;font-size:19px}
@@ -54,5 +56,5 @@
 <div class="links"><a href="character.html">← キャラクター紹介へ戻る</a></div>
 </main>
 <footer class="footer"><div class="wrap"><span>© <span id="year"></span> Aev0rnJP</span><a href="https://github.com/mylifereading6666-oss/Aev0rnJP-Portal">Website Repository ↗</a></div></footer>
-<script src="script.js?v=20261122-9"></script>
+<script src="script.js?v=20261122-10"></script>
 </body></html>

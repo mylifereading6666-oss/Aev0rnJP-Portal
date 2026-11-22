@@ -22,11 +22,12 @@
 "公式チャンネル @Aev0rnJP":"Official channel @Aev0rnJP","YouTubeを開く ↗":"Visit YouTube ↗","制作プロジェクトを見る":"Explore projects"
 };
 const reverse=Object.fromEntries(Object.entries(translations).map(([ja,en])=>[en,ja]));
-let language="ja";
+let language="ja";try{language=localStorage.getItem("aev0rn_language")==="en"?"en":"ja";}catch(e){}
 function translate(lang){const map=lang==="en"?translations:reverse;const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode()){const original=node.nodeValue;const trimmed=original.trim();if(map[trimmed])node.nodeValue=original.replace(trimmed,map[trimmed]);}
 document.documentElement.lang=lang;const button=document.getElementById("lang");if(button)button.textContent=lang==="ja"?"EN":"日本語";
 const titles={"Aev0rnJPについて | Aev0rnJP":"About Aev0rnJP | Aev0rnJP","活動分野 | Aev0rnJP":"Fields | Aev0rnJP","制作プロジェクト | Aev0rnJP":"Projects | Aev0rnJP","オリジナルキャラクター | Aev0rnJP":"Original Character | Aev0rnJP","公式リンク | Aev0rnJP":"Official Links | Aev0rnJP"};const back=Object.fromEntries(Object.entries(titles).map(([a,b])=>[b,a]));if(lang==="en")document.title=titles[document.title]||document.title;else document.title=back[document.title]||document.title;
 }
-const button=document.getElementById("lang");if(button)button.addEventListener("click",()=>{language=language==="ja"?"en":"ja";translate(language)});
+const button=document.getElementById("lang");if(button)button.addEventListener("click",()=>{language=language==="ja"?"en":"ja";try{localStorage.setItem("aev0rn_language",language);}catch(e){}translate(language)});
+if(language==="en")translate("en");
 const year=document.getElementById("year");if(year)year.textContent=new Date().getFullYear();
 })();

@@ -27,3 +27,96 @@
  #site-nav a{display:block;width:100%;padding:11px 12px;border-bottom:1px solid #ffffff12;font-size:14px}
 }
 @media(min-width:761px){.menu-toggle{display:none!important}#site-nav{display:flex!important}}
+
+
+/* Premium dimensional UI: layered surfaces, depth and tactile controls */
+:root{
+ --depth-shadow:0 12px 26px #0008,0 3px 0 #070611;
+ --depth-shadow-hover:0 18px 34px #0009,0 5px 0 #080715,0 0 22px #8e75ff24;
+ --edge-light:#ffffff24;
+}
+button,.links a{
+ border:1px solid #655a91;
+ border-top-color:#a99be0;
+ background:linear-gradient(160deg,#39315f 0%,#211d40 48%,#141229 100%);
+ box-shadow:inset 0 1px 0 #ffffff30,inset 0 -3px 0 #0807158c,0 5px 0 #080715,0 9px 16px #0007;
+ text-shadow:0 1px 2px #0009;
+ transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,filter .18s ease;
+}
+button:hover,.links a:hover{
+ transform:translateY(-3px);
+ border-color:#9b8ce0;
+ box-shadow:inset 0 1px 0 #ffffff45,inset 0 -3px 0 #0807158c,0 7px 0 #080715,0 14px 22px #0008,0 0 18px #8e75ff30;
+ filter:brightness(1.12);
+}
+button:active,.links a:active{
+ transform:translateY(3px);
+ box-shadow:inset 0 2px 7px #0009,0 1px 0 #080715;
+}
+button:focus-visible,.links a:focus-visible,#site-nav a:focus-visible{
+ outline:2px solid var(--blue);outline-offset:4px;
+}
+#lang{border-radius:12px;background:linear-gradient(145deg,#315b83,#20264f 58%,#17142e)}
+.menu-toggle{
+ border-radius:14px;
+ border:1px solid #8274bb;
+ background:linear-gradient(145deg,#514783 0%,#29234d 55%,#17142f 100%);
+ box-shadow:inset 0 1px 0 #ffffff55,inset 0 -4px 0 #0b091b,0 5px 0 #080715,0 9px 18px #0009,0 0 18px #8b75ff20;
+}
+.menu-toggle span{height:2.5px;box-shadow:0 1px 2px #0008;transition:transform .2s ease,opacity .2s ease}
+.menu-toggle[aria-expanded="true"]{background:linear-gradient(145deg,#66569c,#30275c 58%,#17142f);box-shadow:inset 0 2px 7px #08071599,0 2px 0 #080715,0 0 22px #9a80ff50}
+.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(7.5px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-7.5px) rotate(-45deg)}
+.card,.visual{
+ position:relative;
+ border:1px solid #4b426f;
+ border-top-color:#71649c;
+ background:linear-gradient(145deg,#262143 0%,#19162f 48%,#100e20 100%);
+ box-shadow:inset 0 1px 0 #ffffff20,inset 0 -2px 0 #0807158c,0 7px 0 #080715,0 14px 26px #0007;
+ transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.card:before,.visual:before{
+ content:"";position:absolute;inset:1px 1px auto;height:1px;
+ background:linear-gradient(90deg,transparent,#ffffff45,transparent);
+ pointer-events:none;
+}
+.card:hover,.visual:hover{
+ transform:translateY(-5px);
+ border-color:#8b7bc4;
+ box-shadow:inset 0 1px 0 #ffffff30,0 9px 0 #080715,0 20px 34px #0009,0 0 24px #8e75ff20;
+}
+.links a{
+ display:inline-flex;align-items:center;justify-content:center;
+ padding:8px 13px;border-radius:10px;color:#d8d0ff;
+}
+#site-nav a{
+ transition:transform .16s ease,color .16s ease,background .16s ease,box-shadow .16s ease;
+}
+#site-nav a:hover{color:#fff;text-shadow:0 0 12px #8eafff;background:#ffffff0b}
+@media(max-width:760px){
+ #site-nav{
+  margin-top:8px;padding:12px!important;
+  border:1px solid #625587!important;border-top-color:#a394d5!important;
+  border-radius:16px;
+  background:linear-gradient(155deg,#302951 0%,#1b1835 52%,#100e22 100%);
+  box-shadow:inset 0 1px 0 #ffffff30,inset 0 -4px 0 #08071588,0 7px 0 #080715,0 15px 28px #000b,0 0 25px #8e75ff24;
+  transform-origin:top center;
+ }
+ #site-nav.open{animation:menu-drop .22s cubic-bezier(.2,.8,.2,1) both}
+ #site-nav a{
+  margin:4px 0;padding:11px 13px!important;
+  border:1px solid #ffffff16!important;border-top-color:#ffffff30!important;
+  border-radius:10px;
+  background:linear-gradient(145deg,#38315e,#211d40 60%,#17142d);
+  box-shadow:inset 0 1px 0 #ffffff20,0 3px 0 #090718,0 5px 9px #0006;
+ }
+ #site-nav a:active{transform:translateY(2px);box-shadow:inset 0 2px 5px #0008,0 1px 0 #090718}
+}
+@keyframes menu-drop{from{opacity:0;transform:perspective(700px) rotateX(-12deg) translateY(-8px)}to{opacity:1;transform:perspective(700px) rotateX(0) translateY(0)}}
+@media(hover:none){
+ .card:hover,.visual:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}

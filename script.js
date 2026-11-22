@@ -1,5 +1,14 @@
 (()=>{"use strict";
 const translations={
+"ホーム":"Home","Aev0rnJPについて":"About Aev0rnJP","活動・制作分野":"Fields of Activity & Creation","プロジェクト一覧":"Projects","キャラクター紹介":"Character","制作過程":"Making Process","使用技術":"Technology Stack","よくある質問":"FAQ",
+"CREATIVE PROJECTS / DIGITAL WORKS":"CREATIVE PROJECTS / DIGITAL WORKS",
+"デジタル制作の企画・設計・開発を行っています。":"We plan, design, and build digital projects.",
+"Web制作":"Web Development","ゲーム制作":"Game Development","ツール開発":"Tool Development","デザイン・ビジュアル制作":"Design & Visual Creation",
+"使用技術と制作環境":"Technologies and Tools","制作内容に応じて、次の技術やツールを使い分けています。":"We choose technologies and tools according to each project.",
+"フロントエンド":"Frontend","HTML：ページの構造とコンテンツを作成します。":"HTML: structures page content.","CSS：レイアウト、配色、レスポンシブデザインを実装します。":"CSS: implements layouts, colors, and responsive design.","JavaScript：画面操作やブラウザー内の機能を実装します。":"JavaScript: adds interactions and browser-based features.",
+"開発・公開環境":"Development & Hosting","GitHub：ソースコードの管理と変更履歴の記録に使用します。":"GitHub: source control and change history.","GitHub Pages：静的Webサイトの公開に使用します。":"GitHub Pages: hosting static websites.","ブラウザー開発者ツール：表示や動作の確認、問題の調査に使用します。":"Browser developer tools: testing and troubleshooting.",
+"制作方針":"Development Principles","基本的に静的サイトを中心に構成し、必要な場合にのみ外部サービスやデータベースを利用します。":"Projects are generally built as static sites, using external services or databases only when needed.",
+"よくある質問":"Frequently Asked Questions","Aev0rnJPは何をしていますか？":"What does Aev0rnJP do?","Webサイト、ツール、ゲームなどのデジタルコンテンツを企画・制作しています。":"Aev0rnJP plans and creates digital content such as websites, tools, and games.","サイトはスマートフォンでも利用できますか？":"Can I use the site on a smartphone?","はい。スマートフォン・タブレット・PCで見やすい表示になるように調整しています。":"Yes. The site is designed for smartphones, tablets, and PCs.","アカウント登録やログインは必要ですか？":"Do I need an account or login?","このポータルサイトはログインやアカウント登録なしで閲覧できます。":"This portal can be viewed without an account or login.","掲載されているプロジェクトはどこで利用できますか？":"Where can I use the listed projects?","プロジェクト一覧にある各公式サイトのリンクからアクセスできます。":"You can access them through the official website links on the Projects page.","制作過程の画像は実際の作業記録ですか？":"Are the process images actual work-in-progress records?","制作過程ページの工程画像は、制作の流れを説明するためのイメージです。実際の作業を撮影した記録ではありません。":"The process images are illustrative and explain the workflow. They are not actual recordings of the work.","英語表示に切り替えられますか？":"Can I switch the language to English?","各ページ上部の言語切り替えボタンから日本語・英語を切り替えられます。":"Use the language button at the top of each page to switch between Japanese and English.",
 "概要":"About","活動分野":"Fields","プロジェクト":"Projects","キャラクター":"Character","公式リンク":"Official Links",
 "制作プロジェクト":"Projects","オリジナルキャラクター":"Original Character",
 "色鉛筆イラスト":"Colored-pencil Illustration","3Dキャラクター":"3D Character",
@@ -112,6 +121,8 @@ function render(){
 function toggle(){lang=lang==="ja"?"en":"ja";saveLang(lang);render();}
 document.addEventListener("click",function(event){const target=event.target.closest("#lang");if(target){event.preventDefault();event.stopPropagation();toggle();}},true);
 render();
+const menuButton=document.getElementById("menu-toggle"),siteNav=document.getElementById("site-nav");
+if(menuButton&&siteNav){menuButton.addEventListener("click",()=>{const opened=siteNav.classList.toggle("open");menuButton.setAttribute("aria-expanded",String(opened));menuButton.setAttribute("aria-label",opened?"メニューを閉じる":"メニューを開く");});siteNav.addEventListener("click",e=>{if(e.target.closest("a")){siteNav.classList.remove("open");menuButton.setAttribute("aria-expanded","false");}});}
 window.addEventListener("pageshow",()=>{lang=readLang();render();});
 window.addEventListener("storage",e=>{if(e.key==="aev0rn_language"){lang=readLang();render();}});
 

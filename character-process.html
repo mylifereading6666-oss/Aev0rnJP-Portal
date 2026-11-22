@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090817">
+<title>キャラクター制作過程 | Aev0rnJP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.process-intro{color:var(--muted);max-width:780px}
+.process-section{margin:28px 0 64px}
+.process-section h2{font-size:clamp(24px,4vw,34px);margin:0 0 8px}
+.process-final{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,.8fr);gap:20px;align-items:center;margin:20px 0 26px}
+.process-final .visual{padding:8px}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;counter-reset:step}
+.step{position:relative;background:linear-gradient(145deg,#19172f,#100f21);border:1px solid var(--line);border-radius:14px;padding:20px 20px 20px 62px;min-height:132px}
+.step:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:18px;top:18px;color:var(--blue);font-weight:800;font-size:19px}
+.step h3{margin:0 0 6px;font-size:17px}
+.step p{margin:0;color:var(--muted);font-size:14px}
+.note{border-left:3px solid var(--violet);padding:12px 16px;background:#a58aff10;color:var(--muted);font-size:13px;margin:18px 0}
+@media(max-width:700px){.process-final{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap bar"><a class="brand" href="index.html">Aev0rn<b>JP</b></a><nav><a href="about.html">概要</a><a href="fields.html">活動分野</a><a href="projects.html">プロジェクト</a><a href="character.html">キャラクター</a><a href="links.html">公式リンク</a></nav><button id="lang">EN</button></div></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow">CHARACTER / MAKING PROCESS</div><h1><span class="grad">キャラクター制作過程</span></h1><p class="lead">2種類のキャラクターデザインについて、それぞれ独立した工程として紹介します。ラフスケッチから形を整え、仕上げに至るまでの流れを段階ごとにまとめています。</p></section>
+<section class="process-section" id="pencil">
+<div class="eyebrow">01 / COLORED PENCIL</div><h2>色鉛筆イラストの制作工程</h2>
+<p class="process-intro">手描きの線と色鉛筆らしい柔らかな質感を活かすイラスト制作の工程です。</p>
+<div class="process-final"><div><h3>完成イメージ</h3><p class="process-intro">線の表情や色の重なりを残し、手描きならではの温かみを持つ三面図としてまとめます。</p></div><div class="visual"><img src="assets/characters/01-pencil/file_00000000e6c0820986a7f4921d8424c9.png" alt="完成した色鉛筆イラストのキャラクター三面図" loading="lazy"></div></div>
+<div class="steps">
+<article class="step"><h3>ラフスケッチ</h3><p>頭身、全体のシルエット、正面・側面・背面の大まかなポーズを鉛筆で描き、キャラクターの方向性を決めます。</p></article>
+<article class="step"><h3>形と比率の整理</h3><p>顔、髪、耳、衣装、手足の位置を調整。三方向で大きさや特徴が食い違わないように輪郭を整えます。</p></article>
+<article class="step"><h3>線画の描き込み</h3><p>ラフをもとに輪郭や細部を描き起こし、髪の束、衣装の境界、小物などの形を明確にします。</p></article>
+<article class="step"><h3>色鉛筆で着色</h3><p>ベースカラーを薄く重ね、色の濃淡や陰影を少しずつ加えます。塗りのムラや筆圧を活かして質感を作ります。</p></article>
+<article class="step"><h3>質感と細部の仕上げ</h3><p>髪や衣装の色の重なり、影、ハイライトを整え、手描きの風合いを残しながら見やすく仕上げます。</p></article>
+<article class="step"><h3>三面図として整える</h3><p>正面・側面・背面の配置と余白を調整し、デザイン資料として全体を確認できる形にまとめます。</p></article>
+</div></section>
+<section class="process-section" id="three-d">
+<div class="eyebrow">02 / 3D CHARACTER</div><h2>3Dキャラクターの制作工程</h2>
+<p class="process-intro">立体の形状を組み立て、マテリアルやライティングによって完成イメージを整える工程です。</p>
+<div class="process-final"><div><h3>完成イメージ</h3><p class="process-intro">立体感、表面の質感、青と紫を中心とした光の表現をまとめ、複数方向から確認できるデザイン資料にします。</p></div><div class="visual"><img src="assets/characters/02-3d/file_0000000076f08209a0cc8be39e649494.png" alt="完成した3Dキャラクター三面図" loading="lazy"></div></div>
+<div class="steps">
+<article class="step"><h3>ラフ・形状設計</h3><p>シルエットと各パーツの大きさを決め、正面・側面・背面で共通するデザイン要素を整理します。</p></article>
+<article class="step"><h3>ベースモデル作成</h3><p>頭部、胴体、手足、髪、耳、衣装などの基本形状を作り、全体のバランスを確認します。</p></article>
+<article class="step"><h3>ディテール調整</h3><p>髪の流れ、顔まわり、衣装の境界や装飾を追加し、各方向から見た形状のつながりを整えます。</p></article>
+<article class="step"><h3>マテリアル設定</h3><p>パーツごとに色や表面の反射を設定。素材の違いが分かるように質感を調整します。</p></article>
+<article class="step"><h3>ライティングとレンダリング</h3><p>光源と背景を調整し、青・紫系の発光表現や陰影を加えて立体感を引き出します。</p></article>
+<article class="step"><h3>三方向の最終確認</h3><p>正面・側面・背面の見え方を揃え、形状や配色の一貫性を確認して完成資料にまとめます。</p></article>
+</div></section>
+<p class="note">※このページは、掲載されている完成画像をもとに整理した制作工程の紹介です。実際に記録された作業ログや未公開の途中段階画像を示すものではありません。</p>
+<div class="links"><a href="character.html">← キャラクター紹介へ戻る</a></div>
+</main>
+<footer class="footer"><div class="wrap"><span>© <span id="year"></span> Aev0rnJP</span><a href="https://github.com/mylifereading6666-oss/Aev0rnJP-Portal">Website Repository ↗</a></div></footer>
+<script src="script.js?v=20261122-9"></script>
+</body></html>

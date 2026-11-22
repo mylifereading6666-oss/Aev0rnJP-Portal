@@ -60,7 +60,7 @@ function render(){
 }
 function toggle(){lang=lang==="ja"?"en":"ja";saveLang(lang);render();}
 const btn=document.getElementById("lang");
-if(btn){btn.addEventListener("click",toggle);btn.onclick=toggle;}
+if(btn){btn.addEventListener("click",toggle);}
 render();
 window.addEventListener("pageshow",()=>{lang=readLang();render();});
 window.addEventListener("storage",e=>{if(e.key==="aev0rn_language"){lang=readLang();render();}});

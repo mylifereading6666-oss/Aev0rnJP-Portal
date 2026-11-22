@@ -59,8 +59,7 @@ function render(){
  else if(lang==="ja"){for(const [ja,en] of Object.entries(titleMap))if(document.title===en){document.title=ja;break;}}
 }
 function toggle(){lang=lang==="ja"?"en":"ja";saveLang(lang);render();}
-const btn=document.getElementById("lang");
-if(btn){btn.addEventListener("click",toggle);}
+document.addEventListener("click",function(event){const target=event.target.closest("#lang");if(target){event.preventDefault();event.stopPropagation();toggle();}},true);
 render();
 window.addEventListener("pageshow",()=>{lang=readLang();render();});
 window.addEventListener("storage",e=>{if(e.key==="aev0rn_language"){lang=readLang();render();}});

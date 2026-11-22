@@ -10,3 +10,20 @@
  #site-nav a{padding:10px 12px;border-top:1px solid #ffffff12;font-size:14px}
  #lang{order:3}
 }
+
+/* Reliable shared header and mobile navigation */
+.bar{position:relative}
+.menu-toggle{display:none;align-items:center;justify-content:center;flex-direction:column;gap:5px;width:44px;height:44px;min-width:44px;padding:8px;flex:0 0 44px}
+.menu-toggle span{display:block;width:21px;height:2px;background:#e9e4ff;border-radius:2px;pointer-events:none}
+#lang{min-width:48px;min-height:40px;flex:0 0 auto}
+#site-nav{display:flex;align-items:center;gap:clamp(8px,1.5vw,18px)}
+@media(max-width:760px){
+ .bar{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:10px 0}
+ .brand{order:1}
+ #lang{order:2;margin-left:auto}
+ .menu-toggle{display:flex;order:3}
+ #site-nav{display:none!important;order:4;flex:0 0 100%;width:100%;padding:8px 0 12px;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid #ffffff18}
+ #site-nav.open{display:flex!important}
+ #site-nav a{display:block;width:100%;padding:11px 12px;border-bottom:1px solid #ffffff12;font-size:14px}
+}
+@media(min-width:761px){.menu-toggle{display:none!important}#site-nav{display:flex!important}}

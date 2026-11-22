@@ -73,6 +73,19 @@ const translations={
 "各工程に掲載している画像は、完成作品とは異なる場合があります。実際の制作途中を記録した画像ではなく、制作の流れを説明するためのイメージです。完成作品は各セクションの「完成イメージ」をご確認ください。":"The images shown for each stage may differ from the finished artwork. They are illustrative images to explain the workflow, not records of the actual creation process. Please refer to the “Final Artwork” in each section for the finished work.",
 "※工程画像は制作の流れを説明するためのイメージです。実際の制作途中を記録したものではなく、掲載している完成作品と細部や見た目が異なる場合があります。":"Note: The process images are illustrative images to explain the workflow. They are not records of the actual creation process and may differ in details and appearance from the published final artwork.",
 "← キャラクター紹介へ戻る":"← Back to Character"
+,
+"デザインの特徴":"Design Features",
+"作品の見どころ":"Highlights",
+"色鉛筆ならではの柔らかな線と色の重なりを活かした、手描きのキャラクターデザインです。":"A hand-drawn character design featuring the soft lines and layered colors unique to colored pencils.",
+"正面・側面・背面を並べることで、衣装や髪型、シルエットを複数の方向から確認できます。":"The front, side, and back views make it easy to examine the outfit, hairstyle, and silhouette from multiple angles.",
+"立体的な造形と素材表現を組み合わせ、青や紫を基調としたビジュアルに仕上げたデザインです。":"A design combining three-dimensional forms and material effects, finished with a blue-and-purple visual palette.",
+"複数方向のビューによって、立体的なシルエットや各パーツの形状、配色を確認できます。":"Multiple views show the three-dimensional silhouette, individual part shapes, and color scheme.",
+"2種類のデザインを比較":"Compare the Two Designs",
+"同じキャラクターイメージを、異なる表現方法で紹介しています。":"The same character concept is presented through two different visual techniques.",
+"手描きの線や色の重なり、柔らかな質感を楽しめる表現です。イラストならではの温かみが特徴です。":"This style highlights hand-drawn lines, layered colors, and a soft texture, giving the illustration a warm feel.",
+"立体的な形状や光の反射、素材感を確認できる表現です。複数方向から形状を把握しやすい点が特徴です。":"This style highlights three-dimensional forms, light reflections, and material qualities, making the shape easier to understand from multiple angles.",
+"閉じる":"Close",
+"前の画像":"Previous image"
 };
 const titleMap={"キャラクター制作過程 | Aev0rnJP":"Character Making Process | Aev0rnJP","Aev0rnJPについて | Aev0rnJP":"About Aev0rnJP | Aev0rnJP","活動分野 | Aev0rnJP":"Fields | Aev0rnJP","制作プロジェクト | Aev0rnJP":"Projects | Aev0rnJP","オリジナルキャラクター | Aev0rnJP":"Original Character | Aev0rnJP","公式リンク | Aev0rnJP":"Official Links | Aev0rnJP"};
 function readLang(){try{return localStorage.getItem("aev0rn_language")==="en"?"en":"ja"}catch(e){return "ja"}}
@@ -101,5 +114,13 @@ document.addEventListener("click",function(event){const target=event.target.clos
 render();
 window.addEventListener("pageshow",()=>{lang=readLang();render();});
 window.addEventListener("storage",e=>{if(e.key==="aev0rn_language"){lang=readLang();render();}});
-const y=document.getElementById("year");if(y)y.textContent=new Date().getFullYear();
+
+const gallery=[...document.querySelectorAll(".zoomable")];
+const box=document.getElementById("art-lightbox"),view=document.getElementById("lightbox-image"),caption=document.getElementById("lightbox-caption");let galleryIndex=0;
+function showImage(i){if(!gallery.length)return;galleryIndex=(i+gallery.length)%gallery.length;const el=gallery[galleryIndex];view.src=el.currentSrc||el.src;view.alt=el.alt;caption.textContent=el.dataset.caption||el.alt;}
+function openLightbox(i){showImage(i);box.classList.add("open");box.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";}
+function closeLightbox(){box.classList.remove("open");box.setAttribute("aria-hidden","true");document.body.style.overflow="";view.removeAttribute("src");}
+gallery.forEach((el,i)=>{el.addEventListener("click",()=>openLightbox(i));el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openLightbox(i);}});});
+if(box){box.querySelector(".lightbox-close").addEventListener("click",closeLightbox);box.querySelector(".lightbox-prev").addEventListener("click",()=>showImage(galleryIndex-1));box.querySelector(".lightbox-next").addEventListener("click",()=>showImage(galleryIndex+1));box.addEventListener("click",e=>{if(e.target===box)closeLightbox();});document.addEventListener("keydown",e=>{if(!box.classList.contains("open"))return;if(e.key==="Escape")closeLightbox();if(e.key==="ArrowLeft")showImage(galleryIndex-1);if(e.key==="ArrowRight")showImage(galleryIndex+1);});}
+\nconst y=document.getElementById("year");if(y)y.textContent=new Date().getFullYear();
 })();

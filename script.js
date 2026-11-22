@@ -122,5 +122,6 @@ function openLightbox(i){showImage(i);box.classList.add("open");box.setAttribute
 function closeLightbox(){box.classList.remove("open");box.setAttribute("aria-hidden","true");document.body.style.overflow="";view.removeAttribute("src");}
 gallery.forEach((el,i)=>{el.addEventListener("click",()=>openLightbox(i));el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openLightbox(i);}});});
 if(box){box.querySelector(".lightbox-close").addEventListener("click",closeLightbox);box.querySelector(".lightbox-prev").addEventListener("click",()=>showImage(galleryIndex-1));box.querySelector(".lightbox-next").addEventListener("click",()=>showImage(galleryIndex+1));box.addEventListener("click",e=>{if(e.target===box)closeLightbox();});document.addEventListener("keydown",e=>{if(!box.classList.contains("open"))return;if(e.key==="Escape")closeLightbox();if(e.key==="ArrowLeft")showImage(galleryIndex-1);if(e.key==="ArrowRight")showImage(galleryIndex+1);});}
-\nconst y=document.getElementById("year");if(y)y.textContent=new Date().getFullYear();
+
+const y=document.getElementById("year");if(y)y.textContent=new Date().getFullYear();
 })();

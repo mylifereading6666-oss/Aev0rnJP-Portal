@@ -15,11 +15,14 @@
 .process-final .visual{padding:12px;display:flex;align-items:center;justify-content:center;min-height:260px;background:linear-gradient(145deg,#17142e,#0d0c1b)}
 .process-final .visual img{display:block;width:100%;height:auto;max-height:620px;object-fit:contain;object-position:center;margin:auto;border-radius:10px}
 .process-section{scroll-margin-top:90px}
-.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;counter-reset:step}
-.step{position:relative;background:linear-gradient(145deg,#19172f,#100f21);border:1px solid var(--line);border-radius:14px;padding:20px 20px 20px 62px;min-height:132px}
-.step:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:18px;top:18px;color:var(--blue);font-weight:800;font-size:19px}
-.step h3{margin:0 0 6px;font-size:17px}
-.step p{margin:0;color:var(--muted);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:step}
+.step{overflow:hidden;background:linear-gradient(145deg,#19172f,#100f21);border:1px solid var(--line);border-radius:14px;min-width:0}
+.step-visual{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:10px;background:linear-gradient(145deg,#0c0b19,#17142e);overflow:hidden}
+.step-visual img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+.step-copy{padding:14px 16px 17px}
+.step h3{margin:0 0 6px;font-size:16px}
+.step p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .note{border-left:3px solid var(--violet);padding:12px 16px;background:#a58aff10;color:var(--muted);font-size:13px;margin:18px 0}
 @media(max-width:700px){.process-final{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
 </style>
@@ -33,12 +36,18 @@
 <p class="process-intro">手描きの線と色鉛筆らしい柔らかな質感を活かすイラスト制作の工程です。</p>
 <div class="process-final"><div><h3>完成イメージ</h3><p class="process-intro">線の表情や色の重なりを残し、手描きならではの温かみを持つ三面図としてまとめます。</p></div><div class="visual"><img src="assets/characters/01-pencil/file_00000000e6c0820986a7f4921d8424c9.png" alt="完成した色鉛筆イラストのキャラクター三面図" loading="lazy"></div></div>
 <div class="steps">
-<article class="step"><h3>ラフスケッチ</h3><p>頭身、全体のシルエット、正面・側面・背面の大まかなポーズを鉛筆で描き、キャラクターの方向性を決めます。</p></article>
-<article class="step"><h3>形と比率の整理</h3><p>顔、髪、耳、衣装、手足の位置を調整。三方向で大きさや特徴が食い違わないように輪郭を整えます。</p></article>
-<article class="step"><h3>線画の描き込み</h3><p>ラフをもとに輪郭や細部を描き起こし、髪の束、衣装の境界、小物などの形を明確にします。</p></article>
-<article class="step"><h3>色鉛筆で着色</h3><p>ベースカラーを薄く重ね、色の濃淡や陰影を少しずつ加えます。塗りのムラや筆圧を活かして質感を作ります。</p></article>
-<article class="step"><h3>質感と細部の仕上げ</h3><p>髪や衣装の色の重なり、影、ハイライトを整え、手描きの風合いを残しながら見やすく仕上げます。</p></article>
-<article class="step"><h3>三面図として整える</h3><p>正面・側面・背面の配置と余白を調整し、デザイン資料として全体を確認できる形にまとめます。</p></article>
+<article class="step"><div class="step-visual"><img src="assets/characters/process/3d/3d-01-design.png" alt="3Dキャラクター 01 ラフデザイン" loading="lazy"></div><div class="step-copy"><h3>01. ラフ・形状設計</h3><p>シルエットと各パーツの大きさを決め、デザイン要素を整理します。</p></div></article>
+<article class="step"><div class="step-visual"><img src="assets/characters/process/3d/3d-02-model.png" alt="3Dキャラクター 02 ベースモデル" loading="lazy"></div><div class="step-copy"><h3>02. ベースモデル作成</h3><p>頭部、胴体、手足、髪、衣装などの基本形状を作ります。</p></div></article>
+<article class="step"><div class="step-visual"><img src="assets/characters/process/3d/3d-03-detail.png" alt="3Dキャラクター 03 ディテール調整" loading="lazy"></div><div class="step-copy"><h3>03. ディテール調整</h3><p>髪の流れ、顔まわり、衣装や装飾などの細部を整えます。</p></div></article>
+<article class="step"><div class="step-visual"><img src="assets/characters/process/3d/3d-04-material.png" alt="3Dキャラクター 04 マテリアル設定" loading="lazy"></div><div class="step-copy"><h3>04. マテリアル設定</h3><p>パーツごとに色や表面の反射を設定し、素材感を調整します。</p></div></article>
+<article class="step"><div class="step-visual"><img src="assets/characters/process/3d/3d-05-render.png" alt="3Dキャラクター 05 レンダリング" loading="lazy"></div><div class="step-copy"><h3>05. ライティングとレンダリング</h3><p>光源や背景、陰影を調整して立体感を引き出します。</p></div></article>
+<article class="step"><div class="step-visual"><img src="assets/characters/process/3d/3d-06-final.png" alt="3Dキャラクター 06 完成" loading="lazy"></div><div class="step-copy"><h3>06. 完成</h3><p>三方向の形状や配色を確認し、完成資料にまとめます。</p></div></article>
+</div><div class="step-copy"><h3>01. ラフスケッチ</h3><p>頭身や全体のシルエット、ポーズを大まかに描き、キャラクターの方向性を決めます。</p></div></article>
+<article class="step"><div class="step-visual"><img src="assets/characters/process/pencil/pencil-02-proportion.png" alt="色鉛筆イラスト 02 形と比率の整理" loading="lazy"></div><div class="step-copy"><h3>02. 形と比率の整理</h3><p>顔、髪、衣装、手足の位置やバランスを調整します。</p></div></article>
+<article class="step"><div class="step-visual"><img src="assets/characters/process/pencil/pencil-03-lineart.png" alt="色鉛筆イラスト 03 線画" loading="lazy"></div><div class="step-copy"><h3>03. 線画の描き込み</h3><p>輪郭や髪の束、衣装の境界、小物などの形を明確にします。</p></div></article>
+<article class="step"><div class="step-visual"><img src="assets/characters/process/pencil/pencil-04-color.png" alt="色鉛筆イラスト 04 着色" loading="lazy"></div><div class="step-copy"><h3>04. 色鉛筆で着色</h3><p>ベースカラーを重ね、色の濃淡や陰影を少しずつ加えます。</p></div></article>
+<article class="step"><div class="step-visual"><img src="assets/characters/process/pencil/pencil-05-detail.png" alt="色鉛筆イラスト 05 質感と細部" loading="lazy"></div><div class="step-copy"><h3>05. 質感と細部の仕上げ</h3><p>色の重なり、影、ハイライトを整え、手描きの風合いを残します。</p></div></article>
+<article class="step"><div class="step-visual"><img src="assets/characters/process/pencil/pencil-06-final.png" alt="色鉛筆イラスト 06 完成" loading="lazy"></div><div class="step-copy"><h3>06. 完成</h3><p>正面・側面・背面の配置と余白を整え、完成資料にまとめます。</p></div></article>
 </div></section>
 <section class="process-section" id="three-d">
 <div class="eyebrow">02 / 3D CHARACTER</div><h2>3Dキャラクターの制作工程</h2>

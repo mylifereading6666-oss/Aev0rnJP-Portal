@@ -69,6 +69,9 @@ const translations={
 "光源や背景、陰影を調整して立体感を引き出します。":"Adjust lights, background, and shading to bring out the three-dimensional form.",
 "三方向の形状や配色を確認し、完成資料にまとめます。":"Check the shape and colors from all three views and assemble the final reference.",
 "※このページは、掲載されている完成画像をもとに整理した制作工程の紹介です。実際に記録された作業ログや未公開の途中段階画像を示すものではありません。":"Note: This is an overview of the process reconstructed from the published final images. It is not an actual work log or a set of recorded intermediate-stage images.",
+"重要：制作過程の画像について":"Important: About the Process Images",
+"各工程に掲載している画像は、完成作品とは異なる場合があります。実際の制作途中を記録した画像ではなく、制作の流れを説明するためのイメージです。完成作品は各セクションの「完成イメージ」をご確認ください。":"The images shown for each stage may differ from the finished artwork. They are illustrative images to explain the workflow, not records of the actual creation process. Please refer to the “Final Artwork” in each section for the finished work.",
+"※工程画像は制作の流れを説明するためのイメージです。実際の制作途中を記録したものではなく、掲載している完成作品と細部や見た目が異なる場合があります。":"Note: The process images are illustrative images to explain the workflow. They are not records of the actual creation process and may differ in details and appearance from the published final artwork.",
 "← キャラクター紹介へ戻る":"← Back to Character"
 };
 const titleMap={"キャラクター制作過程 | Aev0rnJP":"Character Making Process | Aev0rnJP","Aev0rnJPについて | Aev0rnJP":"About Aev0rnJP | Aev0rnJP","活動分野 | Aev0rnJP":"Fields | Aev0rnJP","制作プロジェクト | Aev0rnJP":"Projects | Aev0rnJP","オリジナルキャラクター | Aev0rnJP":"Original Character | Aev0rnJP","公式リンク | Aev0rnJP":"Official Links | Aev0rnJP"};

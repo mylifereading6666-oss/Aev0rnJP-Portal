@@ -95,7 +95,65 @@ const translations={
 "手描きの線や色の重なり、柔らかな質感を楽しめる表現です。イラストならではの温かみが特徴です。":"This style highlights hand-drawn lines, layered colors, and a soft texture, giving the illustration a warm feel.",
 "立体的な形状や光の反射、素材感を確認できる表現です。複数方向から形状を把握しやすい点が特徴です。":"This style highlights three-dimensional forms, light reflections, and material qualities, making the shape easier to understand from multiple angles.",
 "閉じる":"Close",
-"前の画像":"Previous image"
+"前の画像":"Previous image",
+"活動・制作分野":"Fields of Activity & Creation",
+"キャラクター紹介":"Character",
+"使用技術":"Technology Stack",
+"01 / ABOUT":"01 / ABOUT",
+"Webサイト・ツール・ゲームなど、デジタルコンテンツの企画と制作に取り組んでいます。":"We plan and create digital content, including websites, tools, and games.",
+"目的に合った機能、分かりやすい画面設計、スマートフォンでも使いやすい操作性を重視しています。":"We focus on useful features, clear interface design, and usability on smartphones.",
+"活動分野":"Fields of Activity",
+"情報を分かりやすく届けるWebサイトや、ブラウザーで利用できるサービスを制作。":"We create informative websites and browser-based services.",
+"日常や制作作業をサポートする、実用性を重視したツールを開発。":"We develop practical tools for everyday tasks and creative workflows.",
+"世界観や遊び心を大切にしたゲーム、インタラクティブな作品を制作。":"We create games and interactive works with distinctive worlds and a sense of play.",
+"Fortniteに関するギフト企画も実施しています。企画の内容や参加条件は、実施ごとの案内をご確認ください。":"We also host Fortnite gift events. Please check each event announcement for details and eligibility.",
+"オリジナルキャラクター":"Original Character",
+"色鉛筆イラストの制作過程を見る ↗":"View colored-pencil process ↗",
+"3Dキャラクターの制作過程を見る ↗":"View 3D character process ↗",
+"色鉛筆イラストと3Dキャラクター、それぞれの制作工程を個別に紹介します。":"The making processes for the colored-pencil illustration and 3D character are presented separately.",
+"色鉛筆イラストの工程へ ↗":"Colored-pencil process ↗",
+"3Dキャラクターの工程へ ↗":"3D character process ↗",
+"閉じる ✕":"Close ✕",
+"制作内容に応じて、技術やツールを選択しています。ここでは主に使用する技術と公開環境を紹介します。":"We select technologies and tools according to each project. This page introduces the main technologies and hosting environment.",
+"：ページの構造とコンテンツを作成します。":": Structures page content.",
+"：レイアウト、配色、レスポンシブデザインを実装します。":": Implements layouts, colors, and responsive design.",
+"：画面操作やブラウザー内の機能を実装します。":": Adds interactions and browser-based features.",
+"：ソースコードの管理と変更履歴の記録に使用します。":": Manages source code and change history.",
+"：静的Webサイトの公開に使用します。":": Hosts static websites.",
+"ブラウザー開発者ツール":"Browser Developer Tools",
+"：表示や動作の確認、問題の調査に使用します。":": Tests display and behavior and helps troubleshoot issues.",
+"基本的に静的サイトを中心に構成し、必要な場合にのみ外部サービスやデータベースを利用します。端末への負荷、表示速度、操作の分かりやすさにも配慮します。":"Projects are primarily built as static sites, using external services or databases only when necessary. We also consider device load, loading speed, and ease of use.",
+"Webサイト、ツール、ゲームなどのデジタルコンテンツを企画・制作しています。":"We plan and create digital content such as websites, tools, and games.",
+"サイトはスマートフォンでも利用できますか？":"Can I use the site on a smartphone?",
+"はい。スマートフォン・タブレット・PCで見やすい表示になるように調整しています。":"Yes. The site is designed for smartphones, tablets, and PCs.",
+"アカウント登録やログインは必要ですか？":"Do I need to register or log in?",
+"このポータルサイトはログインやアカウント登録なしで閲覧できます。":"You can browse this portal without registering or logging in.",
+"掲載されているプロジェクトはどこで利用できますか？":"Where can I access the listed projects?",
+"プロジェクト一覧にある各公式サイトのリンクからアクセスできます。":"You can access them through the official website links on the Projects page.",
+"制作過程の画像は実際の作業記録ですか？":"Are the process images actual work records?",
+"制作過程ページの工程画像は、制作の流れを説明するためのイメージです。実際の作業を撮影した記録ではありません。":"The process images are illustrations explaining the workflow, not actual recordings of the work.",
+"英語表示に切り替えられますか？":"Can I switch the site to English?",
+"各ページ上部の言語切り替えボタンから日本語・英語を切り替えられます。":"Use the language button at the top of each page to switch between Japanese and English.",
+"Fortniteのギフト企画も行っていますか？":"Do you also host Fortnite gift events?",
+"はい。Fortniteに関するギフト企画も実施しています。募集の有無や参加条件は、企画ごとの案内をご確認ください。":"Yes. We host Fortnite gift events. Please check each event announcement for availability and eligibility.",
+"Aev0rnJP 色鉛筆イラスト三面図":"Aev0rnJP colored-pencil character turnaround",
+"Aev0rnJP 3Dキャラクター三面図":"Aev0rnJP 3D character turnaround",
+"完成した色鉛筆イラストのキャラクター三面図。タップで拡大":"Finished colored-pencil character turnaround. Tap to enlarge.",
+"完成した3Dキャラクター三面図。タップで拡大":"Finished 3D character turnaround. Tap to enlarge.",
+"色鉛筆イラスト・完成作品":"Colored-pencil illustration - final artwork",
+"3Dキャラクター・完成作品":"3D character - final artwork",
+"色鉛筆イラスト 01 ラフスケッチ":"Colored-pencil illustration 01 - rough sketch",
+"色鉛筆イラスト 02 形と比率の整理":"Colored-pencil illustration 02 - shape and proportions",
+"色鉛筆イラスト 03 線画":"Colored-pencil illustration 03 - line art",
+"色鉛筆イラスト 04 着色":"Colored-pencil illustration 04 - coloring",
+"色鉛筆イラスト 05 質感と細部":"Colored-pencil illustration 05 - texture and details",
+"色鉛筆イラスト 06 完成":"Colored-pencil illustration 06 - final",
+"3Dキャラクター 01 ラフデザイン":"3D character 01 - concept design",
+"3Dキャラクター 02 ベースモデル":"3D character 02 - base model",
+"3Dキャラクター 03 ディテール調整":"3D character 03 - detail refinement",
+"3Dキャラクター 04 マテリアル設定":"3D character 04 - material setup",
+"3Dキャラクター 05 レンダリング":"3D character 05 - rendering",
+"3Dキャラクター 06 完成":"3D character 06 - final"
 };
 const titleMap={"使用技術 | Aev0rnJP":"Technology | Aev0rnJP","FAQ | Aev0rnJP":"FAQ | Aev0rnJP","キャラクター制作過程 | Aev0rnJP":"Character Making Process | Aev0rnJP","Aev0rnJPについて | Aev0rnJP":"About Aev0rnJP | Aev0rnJP","活動分野 | Aev0rnJP":"Fields | Aev0rnJP","制作プロジェクト | Aev0rnJP":"Projects | Aev0rnJP","オリジナルキャラクター | Aev0rnJP":"Original Character | Aev0rnJP","公式リンク | Aev0rnJP":"Official Links | Aev0rnJP"};
 function readLang(){try{return localStorage.getItem("aev0rn_language")==="en"?"en":"ja"}catch(e){return "ja"}}
@@ -113,6 +171,8 @@ function render(){
   if(lang==="en"&&translated)node.nodeValue=original.replace(trimmed,translated);
   else node.nodeValue=original;
  }
+ const attrNames=["alt","title","aria-label","data-caption"];
+ document.querySelectorAll("*").forEach(el=>{attrNames.forEach(name=>{if(!el.hasAttribute(name))return;const prop="_aevOriginal_"+name;if(!Object.prototype.hasOwnProperty.call(el,prop))el[prop]=el.getAttribute(name);const original=el[prop];el.setAttribute(name,lang==="en"?(translations[original]||original):original);});});
  document.documentElement.lang=lang;
  const btn=document.getElementById("lang");
  if(btn){btn.textContent=lang==="ja"?"EN":"日本語";btn.setAttribute("aria-label",lang==="ja"?"Switch to English":"日本語に切り替え");}
